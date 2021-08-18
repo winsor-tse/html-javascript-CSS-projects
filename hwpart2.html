@@ -1,0 +1,84 @@
+<html>
+
+ <head>
+
+   <meta charset="utf-8"></title>
+
+   <link rel="stylesheet" href="hw3part2css.css">
+
+   </head>
+
+      <body>
+             <div class='orangebox'>
+      </div>
+      </br>
+      <button>Click to Place Text in paragraph</button>
+
+     </br>
+
+      </br>
+
+       <textarea> </textarea> 
+
+ 
+
+     </br>
+
+      <button id ="id">Clear the text box</button>
+
+    </br>
+    <div class='greenbox'>
+      <h1 style="text-align:center"> </h1></div>
+<script>
+
+  
+  
+function onClick()  {
+
+  const insidebox = document.querySelector('h1');
+  const input = document.querySelector('textarea');
+  const newDiv = document.createElement('div');
+  
+  newDiv.textContent = input.value;
+  document.body.appendChild(newDiv);
+  insidebox.appendChild(newDiv);
+
+}
+
+document.getElementsByClassName('orangebox')[0]
+        .addEventListener('click', function (event) {
+          //console.log("add");
+            const newDiv = document.createElement('div');
+             newDiv.classList.add('orangebox');
+              document.body.appendChild(newDiv);
+        }); 
+
+ 
+
+function onClick1()  {
+
+  const insidebox = document.querySelector('h1');
+  const input = document.querySelector('textarea');
+  
+  insidebox.textContent = " ";
+  input.value = '';
+
+}
+
+
+
+ const button = document.querySelector('button');
+
+button.addEventListener('click',onClick);
+
+ 
+
+const button1 = document.querySelector('#id');
+
+button1.addEventListener('click',onClick1);
+
+
+</script
+       </body>
+
+  </html>
